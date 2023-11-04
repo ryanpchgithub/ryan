@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document Hub</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+  header {
+    background: #50b7f5;
+    color: white;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+  }
+  header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  header ul {
+    padding: 0;
+    list-style: none;
+  }
+  header ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+  header #branding {
+    float: left;
+  }
+  header #branding h1 {
+    margin: 0;
+  }
+  header nav {
+    float: right;
+    margin-top: 10px;
+  }
+  header .highlight, header .current a {
+    color: #e8491d;
+    font-weight: bold;
+  }
+  header a:hover {
+    color: #ffffff;
+    font-weight: bold;
+  }
+  .upload-area, .download-area {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  footer {
+    background-color: #50b7f5;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div id="branding">
+      <h1>Document Hub</h1>
+    </div>
+    <nav>
+      <ul>
+        <li class="current"><a href="#upload">Upload</a></li>
+        <li><a href="#download">Download</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <section class="upload-area" id="upload">
+    <h2>Upload Documents</h2>
+    <p>Select document to upload:</p>
+    <!-- The form below is for demonstration. The file will not be uploaded anywhere without backend support -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="fileToUpload" id="fileToUpload">
+      <input type="submit" value="Upload Document" name="submit">
+    </form>
+  </section>
+  
+  <section class="download-area" id="download">
+    <h2>Download Documents</h2>
+    <p>You can download the available documents below:</p>
+    <!-- Example documents for download (links would need to be replaced with actual file paths) -->
+    <ul>
+      <li><a href="path_to_document_1" download>Document 1</a></li>
+      <li><a href="path_to_document_2" download>Document 2</a></li>
+      <li><a href="path_to_document_3" download>Document 3</a></li>
+      <!-- Add more documents here -->
+    </ul>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2023 Document Hub</p>
+</footer>
+
+</body>
+</html>
